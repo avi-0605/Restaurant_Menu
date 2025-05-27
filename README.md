@@ -19,7 +19,7 @@ A modern and responsive web application showcasing the menu for "Spice Haven," a
 
 Experience the "Spice Haven" menu live:
 
-[**Live Demo Link Here**](YOUR_HOSTING_LINK_HERE)
+[**Live Demo Link Here**](https://avi-0605.github.io/Restaurant_Menu/)
 
 *(Replace `YOUR_HOSTING_LINK_HERE` with the actual URL once you deploy your project.)*
 
@@ -32,3 +32,8 @@ Experience the "Spice Haven" menu live:
     * `Inter` (for body text)
 
 ## 📂 Project Structure
+
+restaurant-menu/
+├── index.html
+├── styles.css
+└── image/

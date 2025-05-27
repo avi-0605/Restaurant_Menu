@@ -1,0 +1,379 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.6;
+  background: #f8f8f8;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  background: transparent;
+  box-shadow: none;
+  z-index: 101;
+  width: 100%;
+  padding: 18px 0;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+body.scrolled .navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+body.scrolled .navbar .logo,
+body.scrolled .navbar .nav-links a {
+  color: #005645;
+  text-shadow: none;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 29px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  font-size: 17px;
+}
+
+.nav-links a:hover {
+  color: #D4AF37;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero img {
+  position: absolute;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.8);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.95);
+}
+
+.hero-content h1 {
+  font-size: 68px;
+  margin-bottom: 10px;
+  font-family: 'Lora', serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 32px;
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+section {
+  padding: 64px 0;
+}
+
+.menu-section h2 {
+    text-align: center;
+  margin-top: 20px;
+  text-align: center;
+  color: #005645;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.category {
+  margin-bottom: 56px;
+}
+
+.category h3 {
+  border-bottom: 2px solid #D4AF37;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  font-size: 32px;
+  color: #005645;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+/* Add this to your styles.css */
+
+.menu-item-image {
+  width: 100%; 
+  height: 180px; 
+  object-fit: cover;
+  margin-bottom: 16px; 
+  display: block; 
+}
+.menu-card {
+  padding: 20px; 
+}
+.menu-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 24px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.menu-card h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #005645;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+}
+
+.menu-card p {
+  font-size: 16px;
+  margin-bottom: 14px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.price {
+  font-weight: 700;
+  color: #B8860B;
+  font-size: 20px;
+}
+
+.badge {
+  background-color: #D4AF37;
+  color: #333;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.about-section {
+  background: #fff;
+  padding: 64px 24px;
+  margin-bottom: 56px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.about-section h2 {
+  color: #005645;
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-section p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.7;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.location-section {
+  background: #fff;
+  padding: 64px 24px 96px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.location-section h2 {
+  color: #005645;
+  margin-bottom: 24px;
+  font-size: 40px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.location-section p {
+  margin-bottom: 32px;
+  font-size: 19px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+
+
+.footer {
+  background-color: #004d3e; 
+  color: #e0e0e0; 
+  padding: 40px 0; 
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.footer .container {
+  max-width: 900px;
+}
+
+.footer p {
+  margin-bottom: 8px; 
+}
+
+.footer p:last-child {
+  margin-bottom: 0; 
+}
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .hero-content h1 {
+    font-size: 56px;
+  }
+
+  .hero-content p {
+    font-size: 26px;
+  }
+
+  .menu-section h2, .about-section h2, .location-section h2 {
+    font-size: 32px;
+  }
+
+  .category h3 {
+    font-size: 29px;
+  }
+
+  .menu-card h4 {
+    font-size: 22px;
+  }
+
+  .logo, .nav-links a {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  }
+  body.scrolled .navbar .logo,
+  body.scrolled .navbar .nav-links a {
+    color: #005645;
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+
+  .hero-content p {
+    font-size: 21px;
+  }
+
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .logo, .nav-links a {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  }
+  body.scrolled .navbar .logo,
+  body.scrolled .navbar .nav-links a {
+    color: #005645;
+    text-shadow: none;
+  }
+}
